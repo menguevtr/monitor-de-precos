@@ -2,7 +2,7 @@
 
 Ferramenta de linha de comando em **Python** que acompanha o preço de produtos em lojas online, guarda o histórico, gera gráficos e **avisa quando o preço cai abaixo do valor que você quer pagar**.
 
-![Gráfico de exemplo](docs/produto_exemplo.png)
+![Gráfico de exemplo](produto_exemplo.png)
 
 ## O que ele faz
 
