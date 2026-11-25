@@ -122,7 +122,13 @@ monitor-de-precos/
 │   ├── armazenamento.py  # produtos (JSON) e histórico (CSV)
 │   ├── alertas.py        # alerta no terminal e por e-mail
 │   └── grafico.py        # gráfico do histórico
-├── tests/                # testes automatizados
+├── tests/
+│   ├── conftest.py       # deixa os testes importarem o projeto
+│   ├── test_extrator.py  # conversão e extração de preços
+│   └── test_monitor.py   # alertas, histórico e gráfico
+├── exemplo_grafico.py    # gera um gráfico de exemplo com dados fictícios
+├── produto_exemplo.png   # gráfico usado no topo deste README
+├── requirements.txt      # dependências
 └── dados/                # criada ao usar (não vai para o GitHub)
 ```
 
