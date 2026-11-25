@@ -8,6 +8,20 @@ Ferramenta de linha de comando em **Python** que acompanha o preço de produtos 
 
 ![Gráfico de exemplo](produto_exemplo.png)
 
+## Sumário
+
+- [O que ele faz](#o-que-ele-faz)
+- [Como o preço é encontrado](#como-o-preço-é-encontrado)
+- [Tecnologias](#tecnologias)
+- [Instalação](#instalação)
+- [Como usar](#como-usar)
+- [Alerta por e-mail (opcional)](#alerta-por-e-mail-opcional)
+- [Rodando todos os dias automaticamente](#rodando-todos-os-dias-automaticamente-windows)
+- [Testes](#testes)
+- [Estrutura](#estrutura)
+- [Uso responsável](#uso-responsável)
+- [Próximos passos](#próximos-passos)
+
 ## O que ele faz
 
 - Descobre o preço automaticamente na página do produto
