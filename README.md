@@ -1,5 +1,9 @@
 # 📉 Monitor de Preços
 
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![Testes com pytest](https://img.shields.io/badge/testes-pytest-0A9EDC?logo=pytest&logoColor=white)
+![Interface](https://img.shields.io/badge/interface-linha%20de%20comando-4D4D4D)
+
 Ferramenta de linha de comando em **Python** que acompanha o preço de produtos em lojas online, guarda o histórico, gera gráficos e **avisa quando o preço cai abaixo do valor que você quer pagar**.
 
 ![Gráfico de exemplo](produto_exemplo.png)
