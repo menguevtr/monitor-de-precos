@@ -130,6 +130,16 @@ monitor-de-precos/
 
 Use para acompanhar poucos produtos, com consultas espaçadas (uma ou duas vezes por dia), e respeite os termos de uso de cada site. O monitor espera alguns segundos entre uma loja e outra para não sobrecarregar os servidores.
 
+## Problemas comuns
+
+| Mensagem | O que fazer |
+|---|---|
+| `Não encontrei o preço nesta página` | A loja não usa JSON-LD nem meta tags de preço. Informe um seletor CSS com `--seletor` (veja [Quando a loja não é reconhecida](#quando-a-loja-não-é-reconhecida)). |
+| `Erro ao acessar a página: 403 ...` | A loja bloqueou o acesso automático. Tente mais tarde ou monitore o produto em outra loja. |
+| `Ainda não há histórico para esse produto` | O gráfico precisa de pelo menos uma consulta. Rode `python monitor.py verificar` antes de `grafico`. |
+| `Esse produto já está sendo monitorado` | Essa URL já foi adicionada. Use `python monitor.py listar` para ver o id dela. |
+| `Não consegui enviar o e-mail` | Confira as variáveis de ambiente. No Gmail, use uma **senha de app** (a senha normal da conta não funciona) e reabra o terminal depois do `setx`. |
+
 ## Próximos passos
 
 - [ ] Alerta pelo Telegram
