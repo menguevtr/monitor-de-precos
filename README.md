@@ -104,6 +104,16 @@ Crie uma tarefa no Agendador de Tarefas que roda o `verificar` todo dia às 9h (
 schtasks /create /sc daily /st 09:00 /tn "Monitor de Precos" /tr "C:\caminho\monitor-de-precos\.venv\Scripts\python.exe C:\caminho\monitor-de-precos\monitor.py verificar"
 ```
 
+### No Linux ou Mac (cron)
+
+Abra o agendador com `crontab -e` e adicione a linha abaixo para rodar todo dia às 9h (ajuste o caminho):
+
+```bash
+0 9 * * * cd /caminho/monitor-de-precos && mkdir -p dados && .venv/bin/python monitor.py verificar >> dados/verificar.log 2>&1
+```
+
+O `>> dados/verificar.log` guarda a saída de cada execução, assim dá para conferir depois se deu tudo certo. Para receber o alerta fora do terminal, configure o [e-mail](#alerta-por-e-mail-opcional); o cron não carrega o `~/.bashrc`, então coloque as variáveis no início da linha (`ALERTA_EMAIL_REMETENTE=... ALERTA_EMAIL_SENHA=... ALERTA_EMAIL_DESTINO=... .venv/bin/python monitor.py verificar`) ou num arquivo carregado pelo cron.
+
 ## Testes
 
 ```bash
