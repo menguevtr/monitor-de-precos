@@ -96,6 +96,18 @@ setx ALERTA_EMAIL_DESTINO "seuemail@gmail.com"
 
 Feche e abra o terminal de novo para as variáveis valerem.
 
+No Linux ou Mac, coloque no `~/.bashrc` (ou `~/.zshrc`):
+
+```bash
+export ALERTA_EMAIL_REMETENTE="seuemail@gmail.com"
+export ALERTA_EMAIL_SENHA="sua-senha-de-app"
+export ALERTA_EMAIL_DESTINO="seuemail@gmail.com"
+```
+
+**Outro provedor de e-mail?** Por padrão o envio usa o Gmail (`smtp.gmail.com`, porta `465` com SSL). Para usar outro, defina também `ALERTA_EMAIL_SERVIDOR` e `ALERTA_EMAIL_PORTA`. O monitor conecta direto com SSL, então o servidor precisa aceitar SSL nessa porta (normalmente a 465); servidores que só aceitam STARTTLS na porta 587 não funcionam.
+
+Se as três variáveis principais não estiverem definidas, o alerta aparece só no terminal.
+
 ## Rodando todos os dias automaticamente (Windows)
 
 Crie uma tarefa no Agendador de Tarefas que roda o `verificar` todo dia às 9h (ajuste os caminhos para a pasta do projeto):
